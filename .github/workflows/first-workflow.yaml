@@ -13,3 +13,9 @@ jobs:
               run: |
                 node -v
                 npm -v
+    dependent-job:
+        runs-on: windows-latest
+        needs: run-shell-commands
+        steps:
+            - name: echo a string
+              run: Write-Output "Windows String"
