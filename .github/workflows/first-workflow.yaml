@@ -1,0 +1,15 @@
+name: First Workflow
+on:
+    push:
+        branches: ["main"]
+
+jobs:
+    run-shell-commands:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print String
+              run: echo "Hello World"
+            - name: Multiline commands
+              run: |
+                node -v
+                npm -v
