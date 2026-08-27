@@ -15,5 +15,8 @@ jobs:
                 echo "::endgroup::"
             - name: Masking a Value
               run: echo "::add-mask::Password"
+            
+            - name: Echo a Secret
+              run: echo "Password"
             - name: Log Error
               run: echo "::error::missing colon"
