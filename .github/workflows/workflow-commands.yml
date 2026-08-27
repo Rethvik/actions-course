@@ -1,0 +1,10 @@
+name: WorkFlow Commands
+on:
+    push:
+        branches: ["main"]
+jobs:
+    workflow-commands:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Log Error
+              run: echo "::error::missing colon"
